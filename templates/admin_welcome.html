@@ -1,0 +1,11 @@
+{% extends 'common.html' %}
+{% block xyz %}
+    {% include 'admin_menu.html' %}
+    <table>
+    <tr>
+        <th>
+            <img src="{{ url_for('static',filename = 'images/welcome_admin.png') }}" style="text-align: center">
+        </th>
+    </tr>
+    </table>
+{% endblock %}

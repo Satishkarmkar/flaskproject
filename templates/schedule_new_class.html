@@ -1,0 +1,71 @@
+{% extends 'common.html' %}
+
+{% block xyz %}
+    {% include 'admin_menu.html' %}
+
+    <form action="http://127.0.0.1:5000/save_course" method="post">
+        <table align="center" border="2">
+    <tr>
+        <th style="font-size: 15px ; background-color: yellowgreen;text-align: center; color: ivory">New Schedule Class</th>
+    </tr>
+        <tr>
+        <th>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Course No" name="c0" required>
+
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Course Name" name="c1" required>
+
+        </th>
+    </tr>
+     <tr>
+         <th>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Faculty Name" name="c2" required>
+
+        </th>
+     </tr>
+     <tr>
+         <th>
+            <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Date of Start" name="c3" required>
+
+        </th>
+     </tr>
+     <tr>
+         <th>
+            <input type="time" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Time" name="c4" required>
+
+        </th>
+     </tr>
+     <tr>
+         <th>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Fee" name="c5" required>
+
+        </th>
+     </tr>
+     <tr>
+         <th>
+            <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Duration in Days" name="c6" required>
+
+        </th>
+     </tr>
+     <tr>
+        <th style="text-align: center">
+            <button type="submit" class="btn btn-success">Save</button>
+        </th>
+    </tr>
+            {% if message %}
+    <tr>
+        <th>
+            <div class="alert alert-danger" role="alert">
+                <strong>A simple danger alert—check it out!</strong>
+            </div>
+        </th>
+    </tr>
+            {% endif %}
+    </table>
+    </form>
+
+
+{% endblock %}
